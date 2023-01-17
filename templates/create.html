@@ -1,0 +1,16 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+メモ作成
+{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="page-header">メモ作成</h1>
+  <form method="post">
+    <label for="title" class="form-label">タイトル</label>
+    <input type="text" name="title" class="form-control">
+    <label for="body" class="form-label">内容</label>
+    <textarea name="body" class="form-control" rows="10" cols="30"></textarea>
+    <input type="submit" value="新規登録" class="btn btn-primary">
+  </form>
+</div>
+{% endblock %}

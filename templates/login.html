@@ -1,0 +1,22 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+ログイン
+{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="page-header">ログイン</h1>
+  <form method="post" id="login-form" onsubmit="return cancelSubmit()">
+    <div class="mb-3">
+      <label for="username" class="form-label">ユーザー名</label>
+      <input type="text" name="username" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">パスワード</label>
+      <input type="password" name="password" class="form-control">
+    </div>
+    <input type="submit" value="ログイン" class="btn btn-primary">
+  </form>
+  <a href="/signup">ユーザー登録はこちら</a>
+</div>
+<script src="{{ url_for('static', filename='js/login.js')}}"></script>
+{% endblock %}
